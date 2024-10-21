@@ -7,7 +7,7 @@
     <h1>CCCR</h1>
     <h1>Código QR Verificado</h1>
     <p>Este código QR es real. y le pertenece a <span id="name"></span></p>
-
+    <p>Código de seguridad: <span id="token"></span></p>
     <script>
         const d = document;
         // Suponiendo que esta es la URL: http://example.com/?name=JohnDoe
@@ -20,8 +20,10 @@
         
         // Obtener el valor del parámetro 'name'
         const name = params.get('name');
+        const token = params.get('token');
         
         d.querySelector("#name").textContent =name
+        d.querySelector("#token").textContent =token
     </script>
 </body>
 </html>
