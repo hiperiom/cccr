@@ -24,6 +24,12 @@
         
         d.querySelector("#name").textContent =name
         d.querySelector("#token").textContent =token
+
+        fetch('https://script.google.com/macros/s/AKfycbzXuRJfyu6pcFOh4mx35Aug5nGJSWJDjOjobUiznePhnf157MEkRX9ctMpVQ8QNusiC/exec')
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('data').innerHTML = JSON.stringify(data);
+      });
     </script>
 </body>
 </html>
